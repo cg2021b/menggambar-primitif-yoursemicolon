@@ -12,4 +12,8 @@ Canvas adalah media yang akan digunakan untuk menggambar. ``onload`` berfungsi u
 </body>
 ```
 
-## 
+## WebGLProgram
+WebGLProgram adalah bagian dari WebGL API yang merupakan kombinasi dari dua WebGLShader yang dikompilasi, yaitu **vertex shader** dan **fragment shader**.
+```javascript
+
+```
