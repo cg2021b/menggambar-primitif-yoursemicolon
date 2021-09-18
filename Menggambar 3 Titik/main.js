@@ -74,9 +74,8 @@ function main() {
     gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(aPosition);
 
-
     // set warna background
-    gl.clearColor(1.0, 1.0, 1.0, 1.0);
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);
     // clear background
     gl.clear(gl.COLOR_BUFFER_BIT);
 

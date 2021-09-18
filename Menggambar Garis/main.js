@@ -82,5 +82,5 @@ function main() {
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     // instruksi untuk menggambar lines
-    gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
+    gl.drawArrays(gl.TRIANGLE, 0, 4);
 }

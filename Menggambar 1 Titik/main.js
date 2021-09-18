@@ -52,5 +52,5 @@ function main() {
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     // instruksi untuk menggambar point
-    gl.drawArrays(gl.POINT, 0, 1);
+    gl.drawArrays(gl.POINTS, 0, 1);
 }
