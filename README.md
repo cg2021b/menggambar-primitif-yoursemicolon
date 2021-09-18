@@ -46,7 +46,6 @@ gl.drawArrays(gl.POINT, 0, 1);
 ## Satu Titik
 
 
-**Hasil**
 <img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-titik.PNG" width="500">
 
 ## Tiga Titik 
