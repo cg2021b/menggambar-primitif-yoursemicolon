@@ -12,4 +12,30 @@ Canvas adalah media yang akan digunakan untuk menggambar. ``onload`` berfungsi u
 </body>
 ```
 
-## 
+## WebGLProgram
+WebGLProgram adalah bagian dari WebGL API yang merupakan kombinasi dari dua WebGLShader yang dikompilasi, yaitu **vertex shader** dan **fragment shader**.
+```javascript
+// jadikan package berisi data-data
+var shaderProgram = gl.createProgram();
+
+// attach vertex dan fragment
+gl.attachShader(shaderProgram, vertexShader);
+gl.attachShader(shaderProgram, fragmentShader);
+
+// link program
+gl.linkProgram(shaderProgram);
+
+if(!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+    var info = gl.getProgramInfoLog(shaderProgram);
+    throw `Could not compile WebGL program. \n\n ${info}` // template literals
+}
+
+// use the program
+gl.useProgram(shaderProgram);
+
+// clear canvas
+gl.clearColor(0.0, 0.0, 0.0, 1.0);
+gl.clear(gl.COLOR_BUFFER_BIT);
+
+gl.drawArrays(gl.POINT, 0, 1);
+```
