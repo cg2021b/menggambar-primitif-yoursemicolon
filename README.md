@@ -12,8 +12,15 @@ Canvas adalah media yang akan digunakan untuk menggambar. ``onload`` berfungsi u
 </body>
 ```
 
+## WebGLRenderingContext
+WebGLRenderingContext dipakai untuk mendapatkan akses ke konteks WebGL guna rendering objek 2D dan/atau 3D.
+```javascript
+var canvas = document.getElementById("myCanvas");
+var gl = canvas.getContext("webgl");
+```
+
 ## WebGLProgram
-WebGLProgram adalah bagian dari WebGL API yang merupakan kombinasi dari dua WebGLShader yang dikompilasi, yaitu **vertex shader** dan **fragment shader**.
+WebGL Program adalah bagian dari WebGL API yang merupakan kombinasi dari dua WebGLShader yang dikompilasi, yaitu **vertex shader** dan **fragment shader**.
 ```javascript
 // membuat package program --> compile
 var shaderProgram = gl.createProgram();
@@ -101,8 +108,9 @@ Kemudian, untuk memunculkan garis di antara titik yang telah ditentukan
 // instruksi untuk menggambar lines
 gl.drawArrays(gl.LINES, 0, 6);
  ```
+ 
 ## <a src="line-loop"></a>Menggunakan gl.LINE_LOOP
-``gl.LINE_LOOP`` menghubungkan garis pertama dengan garis selanjutnya sehingga garis terakhir terhubung dengan garis pertama. Untuk itu, cukup definisikan 3 titik untuk mebentuk 3 garis segitiga.
+``gl.LINE_LOOP`` untuk menggambar serangkaian segmen garis yang terhubung . Menggabungkan vertex pertama dengan vertex terakhir untuk membentuk loop.
 ```javascript
 ...
 var vertices = [
@@ -117,4 +125,28 @@ Kemudian, untuk memunculkan garis
 // instruksi untuk menggambar lines
 gl.drawArrays(gl.LINE_LOOP, 0, 3);
 ```
+
+## <a src="line-strip"></a>Menggunakan gl.LINE_STRIP
+gl.LINE_STRIP untuk menggambar serangkaian segmen garis yang terhubung. Dari A ke B, B ke C dan C ke A. Untuk itu dibutuhkan 4 titik koordinat.
+```javascript
+...
+var vertices = [
+    -0.5, 0.5, // titik A
+    -0.5, -0.5, // titik B
+    0.5, -0.5, // titik C
+    -0.5, 0.5, // titik A
+];
+...
+```
+Untuk memunculkan garis
+```javascript
+// instruksi untuk menggambar lines
+gl.drawArrays(gl.LINE_STRIP, 0, 4);
+```
+
 <img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-garis.PNG" alt="gambar-garis.png" width="500">
+
+## References
+* https://www.tutorialspoint.com/webgl/webgl_modes_of_drawing.htm
+* https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API?retiredLocale=id
+* https://webglfundamentals.org/webgl/lessons/webgl-points-lines-triangles.html
