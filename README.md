@@ -42,5 +42,38 @@ gl.clear(gl.COLOR_BUFFER_BIT);
 gl.drawArrays(gl.POINT, 0, 1);
 ```
 
-## Hasil Gambar Titik
+# Menggambar Titik
+## Satu Titik
+
+
+**Hasil**
 <img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-titik.PNG" width="500">
+
+## Tiga Titik 
+
+# Menggambar Garis 
+## gl.LINES
+Untuk membentuk 1 garis dengan ``gl.LINES`` dibutuhkan 2 titik sehingga untuk membentuk 3 garis segitiga dibutuhkan 6 titik sebagai berikut.
+```javascript
+...
+var vertices = [
+    // garis AB
+    -0.5, 0.5, // titik A
+    -0.5, -0.5, // titik B
+
+    // garis BC
+    -0.5, -0.5, // titik B
+    0.5, -0.5, // titik C
+
+    // garis CA
+    0.5, -0.5, // titik C
+    -0.5, 0.5 // titik A
+];
+...
+```
+Kemudian, untuk memunculkan garis di antara titik yang telah ditentukan
+```javascript
+...
+// instruksi untuk menggambar point
+gl.drawArrays(gl.LINES, 0, 6);
+ ```
