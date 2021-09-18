@@ -9,17 +9,10 @@ function main() {
 
     // variabel untuk menampung titik-titik yang ada di segitiga
     var vertices = [
-        // garis AB
         -0.5, 0.5, // titik A
         -0.5, -0.5, // titik B
-
-        // garis BC
-        -0.5, -0.5, // titik B
         0.5, -0.5, // titik C
-
-        // garis CA
-        0.5, -0.5, // titik C
-        -0.5, 0.5 // titik A
+        -0.5, 0.5, // titik A
     ];
 
     // empty buffer object to store vertex buffer
@@ -84,10 +77,10 @@ function main() {
 
 
     // set warna background
-    gl.clearColor(1.0, 1.0, 1.0, 1.0);
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);
     // clear background
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    // instruksi untuk menggambar point
-    gl.drawArrays(gl.LINES, 0, 6);
+    // instruksi untuk menggambar lines
+    gl.drawArrays(gl.LINE_STRIP, 0, 4);
 }
