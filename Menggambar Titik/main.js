@@ -1,30 +1,34 @@
 // untuk modularisasi, dipisah berdasarkan fungsi
 function main() {
+    // media untuk menggambar
     var canvas = document.getElementById("myCanvas");
+    // alat untuk menggambar
     var gl = canvas.getContext("webgl");
 
-    // membuat titik
+    // mendefinisikan vertex
     var vertexShaderCode = `
     void main() {
         gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
         gl_PointSize = 10.0;
     }`
 
+    // membuat vertex shader
     var vertexShader = gl.createShader(gl.VERTEX_SHADER);
     gl.shaderSource(vertexShader, vertexShaderCode);
     gl.compileShader(vertexShader);
 
-    // memberi warna
+    // mendefinisikan fragment
     var fragmentShaderCode = `
     void main() {
         gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
     }`;
 
+    // membuat fragment shader
     var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
     gl.shaderSource(fragmentShader, fragmentShaderCode);
     gl.compileShader(fragmentShader);
 
-    // jadikan package berisi data-data
+    // membuat package program --> compile
     var shaderProgram = gl.createProgram();
 
     // attach vertex dan fragment
@@ -42,9 +46,11 @@ function main() {
     // use the program
     gl.useProgram(shaderProgram);
 
-    // clear canvas
+    // set warna background
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    // clear background
     gl.clear(gl.COLOR_BUFFER_BIT);
 
+    // instruksi untuk menggambar point
     gl.drawArrays(gl.POINT, 0, 1);
 }
