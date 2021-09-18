@@ -50,8 +50,8 @@ gl.drawArrays(gl.POINT, 0, 1);
 
 ## Tiga Titik 
 
-# Menggambar Garis 
-## gl.LINES
+# <a src="gambar-garis"></a>Menggambar Garis 
+## <a src="lines"></a>Menggunakan gl.LINES
 Untuk membentuk 1 garis dengan ``gl.LINES`` dibutuhkan 2 titik sehingga untuk membentuk 3 garis segitiga dibutuhkan 6 titik sebagai berikut.
 ```javascript
 ...
@@ -73,6 +73,22 @@ var vertices = [
 Kemudian, untuk memunculkan garis di antara titik yang telah ditentukan
 ```javascript
 ...
-// instruksi untuk menggambar point
+// instruksi untuk menggambar lines
 gl.drawArrays(gl.LINES, 0, 6);
  ```
+## <a src="line-loop"></a>Menggunakan gl.LINE_LOOP
+``gl.LINE_LOOP`` menghubungkan garis pertama dengan garis selanjutnya sehingga garis terakhir terhubung dengan garis pertama. Untuk itu, cukup definisikan 3 titik untuk mebentuk 3 garis segitiga.
+```javascript
+...
+var vertices = [
+    -0.5, 0.5, // titik A
+    -0.5, -0.5, // titik B
+    0.5, -0.5, // titik C
+];
+```
+Kemudian, untuk memunculkan garis
+```javascript
+...
+// instruksi untuk menggambar lines
+gl.drawArrays(gl.LINE_LOOP, 0, 3);
+```
