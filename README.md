@@ -146,6 +146,9 @@ gl.drawArrays(gl.LINE_STRIP, 0, 4);
 
 <img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-garis.PNG" alt="gambar-garis.png" width="500">
 
+# Menggambar Segitiga
+(Soon)
+
 ## References
 * https://www.tutorialspoint.com/webgl/webgl_modes_of_drawing.htm
 * https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API?retiredLocale=id
