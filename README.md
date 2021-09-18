@@ -44,11 +44,35 @@ gl.drawArrays(gl.POINT, 0, 1);
 
 # Menggambar Titik
 ## Satu Titik
-
+Untuk memunculkan gambar satu titik
+```javascript
+...
+// instruksi untuk menggambar point
+gl.drawArrays(gl.POINTS, 0, 1);
+```
 <img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-titik.PNG" alt="gambar-titik.png" width="500">
 
-## Tiga Titik 
+## Tiga Titik
+Untuk menggambar 3 titik, definisikan posisi titik terlebih dahulu.
+```javascript
+// mendefinisikan titik segitiga
+/**
+ * A(-0,5, 0.5); B(-0.5, -0.5); C(0.5, -0.5)
+ */
 
+// variabel untuk menampung titik-titik yang ada di segitiga
+var vertices = [
+    -0.5, 0.5, // titik A
+    -0.5, -0.5, // titik B
+    0.5, -0.5 // titik C
+];
+```
+Untuk memunculkan gambar satu titik
+```javascript
+...
+// instruksi untuk menggambar point
+gl.drawArrays(gl.POINTS, 0, 3);
+```
 <img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-3-titik.PNG" alt="gambar-3-titik.png" width="500">
 
 # <a src="gambar-garis"></a>Menggambar Garis 
