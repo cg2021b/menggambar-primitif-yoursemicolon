@@ -45,10 +45,11 @@ gl.drawArrays(gl.POINT, 0, 1);
 # Menggambar Titik
 ## Satu Titik
 
-
-<img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-titik.PNG" width="500">
+<img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-titik.PNG" alt="gambar-titik.png" width="500">
 
 ## Tiga Titik 
+
+<img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-3-titik.PNG" alt="gambar-3-titik.png" width="500">
 
 # <a src="gambar-garis"></a>Menggambar Garis 
 ## <a src="lines"></a>Menggunakan gl.LINES
@@ -92,3 +93,4 @@ Kemudian, untuk memunculkan garis
 // instruksi untuk menggambar lines
 gl.drawArrays(gl.LINE_LOOP, 0, 3);
 ```
+<img src="https://github.com/cg2021b/menggambar-primitif-yoursemicolon/blob/main/img/gambar-garis.PNG" alt="gambar-garis.png" width="500">
