@@ -12,7 +12,7 @@ function main() {
         -0.5, 0.5, // titik A
         -0.5, -0.5, // titik B
         0.5, -0.5, // titik C
-        -0.5, 0.5, // titik A
+        // 0.5, 0.5, // titik A
     ];
 
     // empty buffer object to store vertex buffer
@@ -82,5 +82,5 @@ function main() {
     gl.clear(gl.COLOR_BUFFER_BIT);
 
     // instruksi untuk menggambar lines
-    gl.drawArrays(gl.LINE_STRIP, 0, 4);
+    gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
 }
